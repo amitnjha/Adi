@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".BluetoothActivity">
+
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forwardButton"
+        android:src="@drawable/forward"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="forward" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/leftButton"
+        android:src="@drawable/left"
+        android:layout_below="@+id/forwardButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:clickable="false"
+        android:contentDescription="left" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rightButton"
+        android:src="@drawable/right"
+        android:layout_below="@+id/leftButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="right" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reverseButton"
+        android:src="@drawable/reverse"
+        android:layout_below="@+id/rightButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="reverse" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/forwardStepper"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:background="#ff54ffee"
+        android:layout_alignBottom="@+id/forwardButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/leftStepper"
+        android:background="#ff54ffee"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_above="@+id/rightButton"
+        android:layout_alignRight="@+id/forwardStepper"
+        android:layout_alignEnd="@+id/forwardStepper" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/rightStepper"
+        android:background="#ff54ffee"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/leftStepper"
+        android:layout_alignStart="@+id/leftStepper" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/reverseStepper"
+        android:background="#ff54ffee"
+        android:layout_alignBottom="@+id/reverseButton"
+        android:layout_alignLeft="@+id/rightStepper"
+        android:layout_alignStart="@+id/rightStepper" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/haltButton"
+        android:src="@drawable/halt"
+        android:clickable="false"
+        android:contentDescription="halt"
+        android:layout_below="@+id/reverseButton"
+        android:layout_alignRight="@+id/rightButton"
+        android:layout_alignEnd="@+id/rightButton" />
+
+</RelativeLayout>

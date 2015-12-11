@@ -1,0 +1,2 @@
+all:
+	g++ -IwiringPi robot_thread_control.cpp sonar_front_thread.cpp sonar_back_thread.cpp sonar_right_thread.cpp sonar_left_thread.cpp -o robot_program

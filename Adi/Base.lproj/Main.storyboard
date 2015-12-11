@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--WWW-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0x-bG-bIc">
+                                <rect key="frame" x="517" y="198" width="51" height="30"/>
+                                <state key="normal" title="&lt;&lt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="XCC-Md-sub"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8U-vJ-B2J">
+                                <rect key="frame" x="517" y="266" width="57" height="30"/>
+                                <state key="normal" title="vv">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reverseButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="vfz-ob-1m9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhd-ak-Yto">
+                                <rect key="frame" x="506" y="133" width="62" height="30"/>
+                                <state key="normal" title="^^">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forwardButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Oha-up-OYB"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Aho-FN-enp">
+                                <rect key="frame" x="490" y="102" width="94" height="29"/>
+                                <connections>
+                                    <action selector="leftStepperPressed:" destination="9pv-A4-QxB" eventType="valueChanged" id="k5f-UH-jHF"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="yWj-px-diE">
+                                <rect key="frame" x="490" y="28" width="94" height="29"/>
+                                <connections>
+                                    <action selector="rightStepperPressed:" destination="9pv-A4-QxB" eventType="valueChanged" id="Uag-q8-x0n"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-oM-mxw">
+                                <rect key="frame" x="490" y="229" width="94" height="29"/>
+                                <connections>
+                                    <action selector="reverseStepperPressed:" destination="9pv-A4-QxB" eventType="valueChanged" id="8Zl-fM-NfW"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Otm-2L-YUY">
+                                <rect key="frame" x="490" y="70" width="94" height="29"/>
+                                <connections>
+                                    <action selector="forwardStepperPressed:" destination="9pv-A4-QxB" eventType="valueChanged" id="1Ob-4o-weJ"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7U-a4-kCt">
+                                <rect key="frame" x="499" y="171" width="69" height="30"/>
+                                <state key="normal" title="&gt;&gt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="MAX-LV-Ahg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRI-5p-9Nu">
+                                <rect key="frame" x="32" y="15" width="111" height="84"/>
+                                <state key="normal" title="Button" image="forward.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forwardButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="SYG-Is-tfE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXP-T6-kJ1">
+                                <rect key="frame" x="32" y="118" width="111" height="89"/>
+                                <state key="normal" title="Button" image="left.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Yy3-5r-cmQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCU-cH-rNB">
+                                <rect key="frame" x="32" y="222" width="111" height="90"/>
+                                <state key="normal" title="Button" image="right.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="zxN-wv-gtM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ae4-ba-MD8">
+                                <rect key="frame" x="32" y="324" width="111" height="85"/>
+                                <state key="normal" title="Button" image="reverse.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reverseButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="9pt-aJ-ERg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1K-iQ-8yX">
+                                <rect key="frame" x="40" y="416" width="111" height="85"/>
+                                <state key="normal" title="Button" image="halt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="haltButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Pee-Y4-ETM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAG-db-HHC">
+                                <rect key="frame" x="166" y="15" width="88" height="84"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="60"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stepperButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="CSS-ht-IDz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cy-Mo-p1q">
+                                <rect key="frame" x="167" y="118" width="88" height="84"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="60"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stepperButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Y6x-3s-X6f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8L-ny-3f7">
+                                <rect key="frame" x="167" y="222" width="88" height="84"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="60"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stepperButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="zVJ-Ye-6b2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBf-7c-DAY">
+                                <rect key="frame" x="165" y="324" width="88" height="84"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="60"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stepperButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="qqk-lm-o9V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="WWW" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="forwardButton" destination="Uhd-ak-Yto" id="Q3n-W1-G7A"/>
+                        <outlet property="forwardStepper" destination="Otm-2L-YUY" id="MF8-6w-H0B"/>
+                        <outlet property="forwardStepperButton" destination="oAG-db-HHC" id="yAo-g8-geo"/>
+                        <outlet property="leftButton" destination="l0x-bG-bIc" id="Mya-tg-fSq"/>
+                        <outlet property="leftStepper" destination="Aho-FN-enp" id="YP7-Ul-MU2"/>
+                        <outlet property="leftStepperButton" destination="1cy-Mo-p1q" id="dt5-12-4Il"/>
+                        <outlet property="revereseButton" destination="y8U-vJ-B2J" id="36i-U5-9Cv"/>
+                        <outlet property="reverseStepper" destination="gkc-oM-mxw" id="VLl-g1-o1Z"/>
+                        <outlet property="reverseStepperButton" destination="vBf-7c-DAY" id="S7v-gN-qPX"/>
+                        <outlet property="rightButton" destination="D7U-a4-kCt" id="D2N-0j-f3M"/>
+                        <outlet property="rightStepper" destination="yWj-px-diE" id="ytH-fs-hHa"/>
+                        <outlet property="rightStepperButton" destination="t8L-ny-3f7" id="v9W-NO-T8p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Xoq-9V-UE3">
+            <objects>
+                <viewController id="nvh-u7-aBx" customClass="ThirdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ic8-CM-k6D"/>
+                        <viewControllerLayoutGuide type="bottom" id="VXs-0K-sbV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pSc-Ny-IL0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="URL:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDN-zy-mtH">
+                                <rect key="frame" x="22" y="90" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1I-kH-hOG">
+                                <rect key="frame" x="67" y="86" width="126" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5B-mn-Ay7">
+                                <rect key="frame" x="206" y="86" width="30" height="30"/>
+                                <state key="normal" title="Test">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testAndSave:" destination="nvh-u7-aBx" eventType="touchUpInside" id="seb-go-70k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bluetooth devices:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xli-ce-PuS">
+                                <rect key="frame" x="22" y="152" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cz3-OU-Qak">
+                                <rect key="frame" x="22" y="186" width="229" height="326"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="9Wp-8u-yys"/>
+                    <connections>
+                        <outlet property="testAndSave" destination="S5B-mn-Ay7" id="fTk-mt-2hh"/>
+                        <outlet property="urlText" destination="y1I-kH-hOG" id="1LK-gH-bLe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxn-Mo-3Sa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="1089"/>
+        </scene>
+        <!--Bluetooth-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J53-nV-Uf0">
+                                <rect key="frame" x="110" y="214" width="43" height="30"/>
+                                <state key="normal" title="1  &lt;&lt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="xpm-h5-dZ5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZG-zv-A8D">
+                                <rect key="frame" x="195" y="285" width="49" height="30"/>
+                                <state key="normal" title="vv  1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reverseButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="phP-jF-Kwb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ek-cX-WvH">
+                                <rect key="frame" x="201" y="114" width="43" height="30"/>
+                                <state key="normal" title="^^  1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forwardButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="uqE-M0-Gwb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoc-fd-ZVa">
+                                <rect key="frame" x="246" y="214" width="44" height="30"/>
+                                <state key="normal" title="&gt;&gt;  1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="6KT-9Y-liS"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="7yO-CK-hqn">
+                                <rect key="frame" x="24" y="171" width="94" height="29"/>
+                                <connections>
+                                    <action selector="leftStepperPressed:" destination="8rJ-Kc-sve" eventType="valueChanged" id="ZN5-Vd-tBQ"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="tLF-FU-Jnr">
+                                <rect key="frame" x="150" y="332" width="94" height="29"/>
+                                <connections>
+                                    <action selector="reverseStepperPressed:" destination="8rJ-Kc-sve" eventType="valueChanged" id="dDt-sz-gaB"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="huo-67-hQt">
+                                <rect key="frame" x="150" y="77" width="94" height="29"/>
+                                <connections>
+                                    <action selector="forwardStepperPressed:" destination="8rJ-Kc-sve" eventType="valueChanged" id="TkS-bh-KOF"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="for-LT-Oyf">
+                                <rect key="frame" x="221" y="171" width="94" height="29"/>
+                                <connections>
+                                    <action selector="rightStepperPressed:" destination="8rJ-Kc-sve" eventType="valueChanged" id="EbY-Dg-P9V"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bluetooth" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="forwardButton" destination="3ek-cX-WvH" id="b8O-8a-vRE"/>
+                        <outlet property="forwardStepper" destination="huo-67-hQt" id="ggH-Ou-hfC"/>
+                        <outlet property="leftButton" destination="J53-nV-Uf0" id="22C-LH-WDX"/>
+                        <outlet property="leftStepper" destination="7yO-CK-hqn" id="HMg-O0-A4a"/>
+                        <outlet property="reverseButton" destination="jZG-zv-A8D" id="34p-RG-7QS"/>
+                        <outlet property="reverseStepper" destination="tLF-FU-Jnr" id="d4m-he-sK1"/>
+                        <outlet property="rightButton" destination="Aoc-fd-ZVa" id="Xlz-0y-GhO"/>
+                        <outlet property="rightStepper" destination="for-LT-Oyf" id="cxu-1o-lVl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="nvh-u7-aBx" kind="relationship" relationship="viewControllers" id="zyc-KD-cWe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="forward.png" width="197" height="153"/>
+        <image name="halt.png" width="99" height="74"/>
+        <image name="left.png" width="194" height="143"/>
+        <image name="reverse.png" width="193" height="147"/>
+        <image name="right.png" width="197" height="151"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
