@@ -55,10 +55,12 @@
         android:layout_height="wrap_content"
         android:text="1"
         android:id="@+id/forwardStepper"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
         android:background="#ff54ffee"
-        android:layout_alignBottom="@+id/forwardButton" />
+        android:layout_alignBottom="@+id/forwardButton"
+        android:layout_toRightOf="@+id/forwardButton"
+        android:layout_toEndOf="@+id/forwardButton"
+        android:layout_marginLeft="51dp"
+        android:layout_marginStart="51dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -66,10 +68,9 @@
         android:text="1"
         android:id="@+id/leftStepper"
         android:background="#ff54ffee"
-        android:layout_toRightOf="@+id/textView"
         android:layout_above="@+id/rightButton"
-        android:layout_alignRight="@+id/forwardStepper"
-        android:layout_alignEnd="@+id/forwardStepper" />
+        android:layout_alignLeft="@+id/forwardStepper"
+        android:layout_alignStart="@+id/forwardStepper" />
 
     <Button
         android:layout_width="wrap_content"
