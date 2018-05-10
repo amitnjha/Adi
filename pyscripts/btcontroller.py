@@ -8,7 +8,7 @@ print 'starting bt controller'
 server_sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
 
 port = 1
-server_sock.bind(("",port))
+server_sock.bind(("B8:27:EB:C8:F5:28",port))
 
 server_sock.listen(1)
 
