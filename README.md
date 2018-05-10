@@ -24,11 +24,6 @@ Additional Contributors:
 Marlon Calero; 
 Mike Williams; 
 Vinaya Sheni; 
-Darshit Mehta; 
-Deep Nana; 
-Shambhawi J; 
-Aditi J; 
-Aaryan J; 
 
 Layout of the repository::
 ========================== 
