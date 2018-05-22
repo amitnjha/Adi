@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Adi</string>
-    <string name="hello_world">Hello Bluetooth World!</string>
+    <string name="hello_world">Drive Control</string>
     <string name="action_settings">Settings</string>
     <string name="leftButtonClicked"></string>
     <string name="title_activity_main">MainActivity</string>

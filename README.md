@@ -21,26 +21,21 @@ The original version has been developed by Amit Jha ( http://sites.wustl.edu/ami
 Additional Contributors:
 =======================
 
-Marlon Calero
-Mike Williams
-Vinaya Sheni
-Darshit Mehta
-Deep Nana
-Shambhawi J
-Aditi J
-Aaryan J
+Marlon Calero; 
+Mike Williams; 
+Vinaya Sheni; 
 
 Layout of the repository::
 ========================== 
 
-Adi.xcodeproj -- iOS xCode related project file
-Android -- Androrid App for interfacing with Adi
-Adi	-- iOS App for interfacing with Adi
+Adi.xcodeproj -- iOS xCode related project file  
+Android -- Android App for interfacing with Adi  
+Adi	-- iOS App for interfacing with Adi    
 adiweb -- web code (html,js) which runs on apache2 server on Adi
-pyscripts -- Various scripts (sh, py, pl) related to various functionality
-cpp -- C++ source code.
-AdiTests -- Test code relate to iOS project. 
-README.md -- This file.
+pyscripts -- Various scripts (sh, py, pl) related to various functionality  
+cpp -- C++ source code.  
+AdiTests -- Test code relate to iOS project.   
+README.md -- This file.  
 
 
 
