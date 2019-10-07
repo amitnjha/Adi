@@ -12,7 +12,7 @@ GPIO.setup(22, GPIO.OUT)
 
 i = 0
 
-while i < 50:
+while i < 1:
 	
 	GPIO.output(18, True)
 	GPIO.output(17, False)
