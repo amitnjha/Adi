@@ -18,7 +18,7 @@ while i < 1:
 	GPIO.output(17, False)
 	GPIO.output(23, False)
 	GPIO.output(22, False)
-	time.sleep(.250)
+	time.sleep(.20)
 	GPIO.output(18, False)
         GPIO.output(17, False)	
        	GPIO.output(23, False)

@@ -58,8 +58,8 @@ def doForward(count=1):
 		#print(time.gmtime());
 		time.sleep(2); 
 		GPIO.output(18, False)
-        	GPIO.output(17, False)	
-       		GPIO.output(23, False)
+		GPIO.output(17, False)	
+		GPIO.output(23, False)
 		GPIO.output(22, False) 
 		time.sleep(2)
 		i=i+1
@@ -115,6 +115,8 @@ def doAction(action,count):
 		doTest(int(count))
 	elif action == "halt":
 		doHalt(1)
+	else:
+		print('no action')
 
 		
 def main():
