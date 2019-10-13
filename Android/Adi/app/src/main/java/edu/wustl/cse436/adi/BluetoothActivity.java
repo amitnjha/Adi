@@ -57,6 +57,7 @@ public class BluetoothActivity extends ActionBarActivity {
         findViewById(R.id.reverseStepper).setOnClickListener(stepperClickListener);
         //findViewById(R.id.leftStepper).setOnClickListener(stepperClickListener);
         requester = new BluetoothRequester();
+        ((TextView)findViewById(R.id.connectionStatus)).setText("Connection Status : " + requester.socket.isConnected());
     }
 
 
