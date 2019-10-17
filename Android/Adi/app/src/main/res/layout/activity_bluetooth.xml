@@ -103,4 +103,10 @@
         android:layout_alignRight="@+id/rightButton"
         android:layout_alignEnd="@+id/rightButton" />
 
+    <TextView
+        android:id="@+id/connectionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connection Status : " />
+
 </RelativeLayout>
