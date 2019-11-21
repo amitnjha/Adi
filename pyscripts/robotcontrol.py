@@ -14,6 +14,13 @@ GPIO.setup(23,GPIO.OUT)
 GPIO.setup(22, GPIO.OUT)
 GPIO.setup(11, GPIO.OUT)
 
+def reset():
+	GPIO.output(11,False)
+	GPIO.output(18,False)
+	GPIO.output(17,False)
+	GPIO.output(22,False)
+	GPIO.output(23,False)
+
 #test count times.
 def doTest(count=1):
 	i = 0;
