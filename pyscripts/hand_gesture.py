@@ -1427,22 +1427,22 @@ while True:
         print(prediction[0][predi],gesture)
         if(prediction[0][predi] > 0.85 and gesture == 'point'):
             video.release()
-            robotcontrol.doLeft()
+            #robotcontrol.doLeft()
             video = cv2.VideoCapture(0)
             ret,frame = video.read()
             bg = frame.copy()
             bbox = bbox_initial
             tracking = -1
             last_matched_time = time.time()
-        elif(prediction[0][predi] > 0.85 and gesture == 'five'):
-            video.release()
-            robotcontrol.doRight()
-            video = cv2.VideoCapture(0)
-            ret,frame = video.read()
-            bg = frame.copy()
-            bbox = bbox_initial
-            tracking = -1
-            last_matched_time = time.time()
+        #elif(prediction[0][predi] > 0.85 and gesture == 'five'):
+        #    video.release()
+            #robotcontrol.doRight()
+        #    video = cv2.VideoCapture(0)
+        #    ret,frame = video.read()
+        #    bg = frame.copy()
+        #    bbox = bbox_initial
+        #    tracking = -1
+        #    last_matched_time = time.time()
         elif(prediction[0][predi] > 0.85 and gesture == 'fist'):
             video.release()
             robotcontrol.doForward()
@@ -1511,7 +1511,7 @@ while True:
     # Display result
     cv2.imshow("display", display)
     # Display result
-    cv2.imshow("data", data_display)
+    #cv2.imshow("data", data_display)
     # Display diff
     #cv2.imshow("diff", diff)
     # Display thresh
@@ -1524,7 +1524,7 @@ while True:
     except:
         pass
     # Display foreground_display
-    cv2.imshow("foreground_display", foreground_display)
+    #cv2.imshow("foreground_display", foreground_display)
     
     
     k = cv2.waitKey(1) & 0xff
