@@ -17,7 +17,7 @@ import java.util.concurrent.BlockingDeque;
  */
 public class BluetoothRequester {
 
-    String piUUID = "00:15:83:3D:0A:57";
+    String piUUID = "DC:A6:32:1F:2B:B0";
     PrintWriter writer ;//= new PrintWriter(bout);
     BluetoothSocket socket ;
 
@@ -40,7 +40,7 @@ public class BluetoothRequester {
         for (BluetoothDevice device : bondedDevices){
             if (device.getAddress() .equals(piUUID)){
                 try {
-                    socket = device.createInsecureRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
+                    socket = device.createInsecureRfcommSocketToServiceRecord(UUID.fromString("1e0ca4ea-299d-4335-93eb-27fcfe7fa848"));
                     socket.connect();
                     bout = socket.getOutputStream();
                     writer = new PrintWriter(bout);
@@ -57,8 +57,37 @@ public class BluetoothRequester {
 
     //try reconnecting if connection was closed due to some reason.
     public boolean reconnect(){
+        BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
 
-        return false;
+        if(adapter == null){
+            //bluetooth is not supported
+            return false;
+        }
+
+        //if (!adapter.isEnabled()) {
+        //    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+        //    startActivityForResult(enableBtIntent, BluetoothAdapter.REQUEST_ENABLE_BT);
+        // }
+
+        Set<BluetoothDevice> bondedDevices = adapter.getBondedDevices();
+
+        OutputStream bout;
+        for (BluetoothDevice device : bondedDevices){
+            if (device.getAddress() .equals(piUUID)){
+                try {
+                    socket = device.createInsecureRfcommSocketToServiceRecord(UUID.fromString("1e0ca4ea-299d-4335-93eb-27fcfe7fa848"));
+                    socket.connect();
+                    bout = socket.getOutputStream();
+                    writer = new PrintWriter(bout);
+                    writer.println("test 2");
+                    writer.flush();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }
+        return  true;
     }
     public boolean sendRequest(String action, String count){
         if(socket!=null && socket.isConnected() && writer!=null ){
