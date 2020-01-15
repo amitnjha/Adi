@@ -243,8 +243,8 @@ earth_img = cv2.imread(earth_fname)
 # In[11]:
 
 
-erosion_img = earth_img.copy()
-erosion_img = cv2.erode(erosion_img, np.ones((10,10), dtype=np.uint8), iterations=1)
+#erosion_img = earth_img.copy()
+#erosion_img = cv2.erode(erosion_img, np.ones((10,10), dtype=np.uint8), iterations=1)
 # plt.imshow(erosion_img)
 
 
@@ -268,11 +268,11 @@ erosion_img = cv2.erode(erosion_img, np.ones((10,10), dtype=np.uint8), iteration
 # In[15]:
 
 
-thresh_img = earth_img.copy()
-thresh_img = cv2.cvtColor(thresh_img, cv2.COLOR_BGR2GRAY)
-ret, thresh = cv2.threshold(thresh_img, 80, 255, cv2.THRESH_BINARY)
-plt.imshow(thresh, cmap='gray')
-print(thresh.shape)
+#thresh_img = earth_img.copy()
+#thresh_img = cv2.cvtColor(thresh_img, cv2.COLOR_BGR2GRAY)
+#ret, thresh = cv2.threshold(thresh_img, 80, 255, cv2.THRESH_BINARY)
+#plt.imshow(thresh, cmap='gray')
+#print(thresh.shape)
 
 
 # ### Background Subtraction Techniques
@@ -1327,6 +1327,9 @@ def mask_array(array, imask):
         output[i, row] = array[i, row]
     return output
 
+angle270 = 270
+scale = 1.0
+
 
 # Begin capturing video
 video = cv2.VideoCapture(0)
@@ -1338,6 +1341,12 @@ if not video.isOpened():
 
 # Read first frame
 ok, frame = video.read()
+(h, w) = frame.shape[:2]
+center = (w / 2, h / 2)
+
+M = cv2.getRotationMatrix2D(center, angle270, scale)
+frame = cv2.warpAffine(frame, M, (h, w))
+
 if not ok:
     print("Cannot read video")
     sys.exit()
@@ -1374,13 +1383,13 @@ while True:
     # Read a new frame
     ok, frame = video.read()
     #print(frame.shape)
-    frame = cv2.flip(frame, 0)
+    #frame = cv2.flip(frame, 0)
     #(h,w) = frame.shape[:2]
     #center = (w/2, h/2)
     #angle90 = 90
     #scale = 1.0
     #M = cv2.getRotationMatrix2D(center, angle90, scale)
-    #frame = cv2.warpAffine(frame, M, (h,w))
+    frame = cv2.warpAffine(frame, M, (h,w))
     display = frame.copy()
     data_display = np.zeros_like(display, dtype=np.uint8) # Black screen to display data
     if not ok:
@@ -1430,6 +1439,7 @@ while True:
             #robotcontrol.doLeft()
             video = cv2.VideoCapture(0)
             ret,frame = video.read()
+            frame = cv2.warpAffine(frame, M, (h,w))
             bg = frame.copy()
             bbox = bbox_initial
             tracking = -1
@@ -1448,6 +1458,7 @@ while True:
             robotcontrol.doForward()
             video = cv2.VideoCapture(0)
             ret,frame = video.read()
+            frame = cv2.warpAffine(frame, M, (h,w))
             bg = frame.copy()
             bbox = bbox_initial
             tracking = -1
@@ -1509,7 +1520,7 @@ while True:
     
     
     # Display result
-    cv2.imshow("display", display)
+    #cv2.imshow("display", display)
     # Display result
     #cv2.imshow("data", data_display)
     # Display diff
@@ -1518,15 +1529,15 @@ while True:
    # cv2.imshow("thresh", thresh)
     # Display mask
     #cv2.imshow("img_dilation", img_dilation)
-    try:
+    #try:
         # Display hand_crop
-        cv2.imshow("hand_crop", hand_crop)
-    except:
-        pass
+        #cv2.imshow("hand_crop", hand_crop)
+    #except:
+    #    pass
     # Display foreground_display
     #cv2.imshow("foreground_display", foreground_display)
     
-    
+    """
     k = cv2.waitKey(1) & 0xff
     
     if k == 27: break # ESC pressed
@@ -1545,8 +1556,8 @@ while True:
         fname = os.path.join("data", CURR_POS, "{}_{}.jpg".format(CURR_POS, get_unique_name(os.path.join("data", CURR_POS))))
         cv2.imwrite(fname, hand_crop)
     elif k != 255: print(k)
-        
-cv2.destroyAllWindows()
+    """    
+#cv2.destroyAllWindows()
 video.release()
 
 
